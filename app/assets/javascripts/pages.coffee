@@ -16,6 +16,7 @@ function initialize() {
         map: map,
         title: 'Estamos Aqui!'
     });
+    console.log("i was called :D");
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 `
