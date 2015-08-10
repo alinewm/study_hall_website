@@ -55,6 +55,7 @@ textarea {
 }
 
 #team {
+  margin-top: 40px;
   background-color: white;
   @include background_sizing;
   .container {
@@ -78,7 +79,7 @@ textarea {
   height: 300px;
 }
 
-#aulas {
+#planos {
   margin-top: 40px;
   background-color: #31c090;
   @include background_sizing;
@@ -88,7 +89,6 @@ textarea {
 }
 
 #coaching {
-  margin-top: 40px;
   background-color: white;
   @include background_sizing;
 }
