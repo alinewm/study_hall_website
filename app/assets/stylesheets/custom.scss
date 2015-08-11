@@ -15,6 +15,15 @@
   -webkit-background-size: cover;
 }
 
+@mixin first_page_padding {
+  padding-top: 50px;
+}
+
+@mixin following_page_padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* universal */
 
 body {
@@ -39,10 +48,7 @@ textarea {
   }
 }
 
-/* chunks */
-
-.container {
-}
+/* static pages */
 
 #landing {
   background-image: url('teacher.jpg');
@@ -50,12 +56,17 @@ textarea {
 }
 
 #description {
+  @include following_page_padding;
   background-color: #efb230;
-  @include  background_sizing;
+  @include background_sizing;
+}
+
+#explanation {
+  @include following_page_padding;
 }
 
 #team {
-  margin-top: 40px;
+  @include first_page_padding;
   background-color: white;
   @include background_sizing;
   .container {
@@ -70,27 +81,20 @@ textarea {
 }
 
 #contact {
-  margin-top: 40px;
+  @include first_page_padding;
   background-color: white;
   @include background_sizing;
-}
-
-#map-canvas {
-  height: 300px;
 }
 
 #planos {
-  margin-top: 40px;
+  @include following_page_padding;
   background-color: #31c090;
   @include background_sizing;
-  .container {
-    margin-top: 50px;
-  }
 }
 
-#coaching {
-  background-color: white;
-  @include background_sizing;
+/* authentication */
+#signup, #login {
+  @include first_page_padding;
 }
 
 /* header */
