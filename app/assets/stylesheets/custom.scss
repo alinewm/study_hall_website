@@ -15,10 +15,6 @@
   -webkit-background-size: cover;
 }
 
-@mixin first_page_padding {
-  padding-top: 50px;
-}
-
 @mixin following_page_padding {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -28,6 +24,8 @@
 
 body {
   margin: 0 auto;
+  padding-top: 50px; /* Whatever the height of your navbar is; the
+                             default is 50px */
 }
 
 section {
@@ -66,7 +64,6 @@ textarea {
 }
 
 #team {
-  @include first_page_padding;
   background-color: white;
   @include background_sizing;
   .container {
@@ -81,7 +78,6 @@ textarea {
 }
 
 #contact {
-  @include first_page_padding;
   background-color: white;
   @include background_sizing;
 }
@@ -94,7 +90,6 @@ textarea {
 
 /* authentication */
 #signup, #login {
-  @include first_page_padding;
 }
 
 /* header */
@@ -109,7 +104,6 @@ textarea {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: #B00100;
     text-decoration:none;
   }
 }
