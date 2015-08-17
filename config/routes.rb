@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
+  def after_sign_in_path_for
+    @user = current_user
+  end
+
+  resources :users, only: [:show]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
