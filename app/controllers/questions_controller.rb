@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  # before_action :logged_in_user, only: [:create, :destroy]
+  before_filter :authenticate_user!
 
   def create
     @question = current_user.questions.build(question_params)
