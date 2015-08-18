@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   def feed
-    if self.admin?
+    if admin?
       Question.all
     else
       questions
