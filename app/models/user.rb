@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :questions, dependent: :destroy
+  has_many :solutions, dependent: :destroy
 
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
@@ -15,5 +16,6 @@ class User < ActiveRecord::Base
 
   def feed
     questions
+    #here we'd have to pull each question with it's associated solution...
   end
 end
