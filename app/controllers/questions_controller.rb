@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   def create
     @question = current_user.questions.build(question_params)
     if @question.save
-      AdminMailer.deliver_new_question_notifier
+      AdminMailer.new_question_notifier.deliver_now
       flash[:success] = "Question created!"
       redirect_to root_url
     else
