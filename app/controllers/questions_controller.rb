@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  # before_action :logged_in_user, only: [:create, :destroy]
 
   def create
     @question = current_user.questions.build(question_params)
@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
       flash[:success] = "Question created!"
       redirect_to root_url
     end
+    @feed_items = []
     render 'pages/about'
   end
 

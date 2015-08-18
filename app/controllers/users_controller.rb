@@ -2,6 +2,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @question = @user.questions.build if user_signed_in?
+    if user_signed_in?
+      @question = @user.questions.build
+      @feed_items = current_user.feed
+    end
   end
 end
