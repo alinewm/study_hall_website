@@ -6,8 +6,33 @@
         <%= devise_error_messages! %>
 
         <div class="field">
-          <%= f.label :email %><br/>
-          <%= f.email_field :email, autofocus: true %>
+          <%= f.label :name %><br/>
+          <%= f.name_field :name, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :school %><br/>
+          <%= f.school_field :school, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :birthday %><br/>
+          <%= f.birthday_field :school, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :grade %><br/>
+          <%= f.grade_field :grade, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :city %><br/>
+          <%= f.city_field :city, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :state %><br/>
+          <%= f.state_field :state, autofocus: true %>
         </div>
 
         <div class="field">
