@@ -15,7 +15,7 @@
 
     <div class="field">
       <%= f.label :birthday %><br/>
-      <%= f.text_field :school, autofocus: true %>
+      <%= f.datetime_field :school, autofocus: true %>
     </div>
 
     <div class="field">
@@ -30,7 +30,7 @@
 
     <div class="field">
       <%= f.label :state %><br/>
-      <%= f.text_field :state, autofocus: true %>
+      <%= f.select_tag :state, options_for_select(br_states), autofocus: true %>
     </div>
 
   <div class="field">

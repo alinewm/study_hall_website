@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'city-state'
+
 gem 'bootstrap-sass'
 
 gem 'devise'
