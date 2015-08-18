@@ -13,6 +13,10 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    if user_signed_in?
+      @answer = @user.answers.build
+    end
   end
 
   def destroy
