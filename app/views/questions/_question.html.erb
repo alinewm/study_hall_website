@@ -1,8 +1,5 @@
 <a href="<%= question_path(question.id) %>" id="question-<%= question.id %>" class="list-group-item">
-  <span class="user"><%= link_to question.user.email, question.user %></span>
-  <span class="content"><%= question.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(question.created_at) %> ago.
-  </span>
+<%= link_to question.user.email, question.user %>
+  <%= question.content %>
 </a>
 
