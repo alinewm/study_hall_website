@@ -6,9 +6,10 @@ class QuestionsController < ApplicationController
     if @question.save
       flash[:success] = "Question created!"
       redirect_to root_url
-    end
+    else
     @feed_items = []
     render 'pages/about'
+    end
   end
 
   def destroy
