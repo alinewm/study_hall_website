@@ -1,6 +1,11 @@
-<div class="container">
-<h1>Hello user</h1>
-<%= render 'users/question_form' %>
-<h3>Question Feed</h3>
-<%= render 'users/feed' %>
-</div>
+<% if current_user.admin? %>
+    <h3>Question Feed</h3>
+    <%= render 'users/feed' %>
+<% else %>
+    <div class="container">
+      <h1>Hello user</h1>
+      <%= render 'users/question_form' %>
+      <h3>Question Feed</h3>
+      <%= render 'users/feed' %>
+    </div>
+<% end %>

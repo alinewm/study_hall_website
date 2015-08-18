@@ -15,7 +15,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   def feed
-    questions
-    #here we'd have to pull each question with it's associated solution...
+    if current_user.admin?
+      Question.all
+    else
+      questions
+      #here we'd have to pull each question with it's associated solution...
+    end
   end
 end
