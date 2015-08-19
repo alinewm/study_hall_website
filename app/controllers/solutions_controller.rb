@@ -2,8 +2,8 @@ class SolutionsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    params[:solution].merge!(:question_id => params[:question_id])
-    @solution = current_user.solutions.build(params[:solution])
+    @question = Question.find(params[:question_id])
+    @solution = @question.solutions.build(user_id: current_user.id)
     if @solution.save
       flash[:success] = "Solution created!"
     else
