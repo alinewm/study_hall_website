@@ -3,7 +3,7 @@ class SolutionsController < ApplicationController
 
   def create
     params[:solution].merge!(:question_id => params[:question_id])
-    @solution = current_user.solutions.build(params[:solution])
+    @solution = (params[:solution])
     if @solution.save
       flash[:success] = "Solution created!"
     else

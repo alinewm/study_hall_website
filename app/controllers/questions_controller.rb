@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     if user_signed_in?
       @user = current_user
+      @solution = current_user.solutions.build
     end
   end
 
