@@ -14,9 +14,9 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @solution = @question.solutions.build
     if user_signed_in?
       @user = current_user
+      @solution = @user.solutions.build
     end
   end
 
