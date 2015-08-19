@@ -13,9 +13,9 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @question = Question.find(params[:id])
     if user_signed_in?
-      @answer = @user.answers.build
+      @user = current_user
     end
   end
 

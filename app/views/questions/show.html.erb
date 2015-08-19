@@ -1,12 +1,4 @@
 <%= link_to question.user.email, question.user %>
 <%= question.content %>
 Posted <%= time_ago_in_words(question.created_at) %> ago.
-<% if @user.admin? %>
-    <%= form_for(@answer) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-        <div class="field">
-          <%= f.text_area :content, placeholder: "Compose new answer..." %>
-        </div>
-        <%= f.submit "Post", class: "btn btn-primary" %>
-    <% end %>
-<% end %>
+<%= render 'questions/solution_form' %>
