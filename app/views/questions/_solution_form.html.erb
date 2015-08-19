@@ -1,0 +1,10 @@
+<% if @user.admin? %>
+    <%= form_for(@solution, remote: true) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div><%= hidden_field_tag :question_id, @question.id %></div>
+        <div class="field">
+          <%= f.text_area :content, placeholder: "Compose new answer..." %>
+        </div>
+        <%= f.submit "Post", class: "btn btn-primary" %>
+    <% end %>
+<% end %>
