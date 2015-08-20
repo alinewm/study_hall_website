@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818160829) do
+ActiveRecord::Schema.define(version: 20150820192157) do
 
   create_table "questions", force: :cascade do |t|
     t.text     "content"
@@ -54,8 +54,12 @@ ActiveRecord::Schema.define(version: 20150818160829) do
     t.string   "grade"
     t.string   "city"
     t.string   "state"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 

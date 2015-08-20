@@ -8,7 +8,7 @@ class AdminMailer < ApplicationMailer
   def new_question_notifier(user, question) # Clean up, not that intuitive
     @user = user
     @question = question
-    @admin = User.find_by_role(2) # Just returns a single admin -> at the moment, there's only a single admin
+    @admin = User.admin # Just returns a single admin -> at the moment, there's only a single admin
     mail to: @admin.email, subject: "New question!"
   end
 end
