@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :questions, dependent: :destroy
   has_many :solutions, dependent: :destroy
+  validates :password, length: { minimum: 8 }, unless: "password.nil?"
+  validates :password, presence: true, if: "id.nil?"
 
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?

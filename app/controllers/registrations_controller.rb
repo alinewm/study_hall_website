@@ -25,6 +25,10 @@ class RegistrationsController < Devise::RegistrationsController
                                  :password,
                                  :password_confirmation,
                                  :current_password)
+    if params[@devise_mapping.name][:password_confirmation].blank?
+      params[@devise_mapping.name].delete(:password)
+      params[@devise_mapping.name].delete(:password_confirmation)
+    end
   end
 
 end
