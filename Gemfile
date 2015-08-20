@@ -57,3 +57,11 @@ group :production do
   gem 'puma'
 end
 
+group :test do
+  gem 'minitest-reporters'
+  gem 'mini_backtrace'
+  gem 'minitest-rails-capybara'
+  gem 'launchy'
+  gem 'guard-minitest', '2.3.1'
+end
+
