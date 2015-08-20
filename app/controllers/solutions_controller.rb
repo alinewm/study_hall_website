@@ -5,7 +5,7 @@ class SolutionsController < ApplicationController
     @solution = current_user.solutions.build(solution_params)
     if @solution.save
       question = Question.find(params[:question_id])
-      UserMailer.question_replied_notifier(current_user, question)
+      UserMailer.question_replied_notifier(current_user, question).deliver_now
       flash[:success] = "Solution created!"
     else
       flash[:danger] = "There was an error"
