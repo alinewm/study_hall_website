@@ -1,5 +1,6 @@
 <a href="<%= question_path(question.id) %>" id="question-<%= question.id %>" class="list-group-item">
 <%= link_to question.user.email, question.user %>
   <%= question.content %>
+  <%= render 'solutions/solution' %>
 </a>
 

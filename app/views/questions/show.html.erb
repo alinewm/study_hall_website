@@ -1,4 +1,4 @@
-<%= link_to @question.user.email, @question.user %>
+<%= @question.user.email %>
 <%= @question.content %>
 Posted <%= time_ago_in_words(@question.created_at) %> ago.
 <%= render 'solutions/solution' %>
