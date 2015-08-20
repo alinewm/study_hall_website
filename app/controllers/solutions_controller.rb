@@ -10,7 +10,7 @@ class SolutionsController < ApplicationController
     else
       flash[:danger] = "There was an error"
     end
-    redirect_to root_url
+    redirect_to request.referrer || root_url
   end
 
   def destroy

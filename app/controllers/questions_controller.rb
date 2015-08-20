@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
     if @question.save
       AdminMailer.new_question_notifier(current_user, @question).deliver_now
       flash[:success] = "Question created!"
-      redirect_to root_url
+      redirect_to request.referrer || root_url
     else
     @feed_items = []
     render 'pages/about'
