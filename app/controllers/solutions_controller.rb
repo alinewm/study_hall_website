@@ -17,7 +17,7 @@ class SolutionsController < ApplicationController
   private
 
   def solution_params
-    params.require(:solution).permit(:content, :question_id)
+    params.require(:solution).permit(:content).merge(question_id: params[:question_id])
   end
 
 end
