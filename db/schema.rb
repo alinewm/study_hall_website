@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20150821032257) do
     t.integer  "role"
     t.string   "name"
     t.string   "school"
-    t.datetime "birthday"
+    t.date     "birthday"
     t.string   "grade"
     t.string   "city"
     t.string   "state"
