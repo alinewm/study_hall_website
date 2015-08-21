@@ -3,6 +3,6 @@
     <div class="field">
       <%= f.text_area :content, placeholder: "Compose new question..." %>
     </div>
-    <%= f.file_field :picture %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
     <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
