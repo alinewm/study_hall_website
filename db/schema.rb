@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821032257) do
+ActiveRecord::Schema.define(version: 20150822013948) do
 
   create_table "questions", force: :cascade do |t|
     t.text     "content"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150821032257) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.integer  "question_balance"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

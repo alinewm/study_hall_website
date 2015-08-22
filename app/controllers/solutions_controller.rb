@@ -6,9 +6,9 @@ class SolutionsController < ApplicationController
     if @solution.save
       question = Question.find(params[:question_id])
       UserMailer.question_replied_notifier(current_user, question).deliver_now
-      flash[:success] = "Solution created!"
+      flash[:notice] = "Solution created!"
     else
-      flash[:danger] = "There was an error"
+      flash[:alert] = "There was an error"
     end
     redirect_to request.referrer || root_url
   end

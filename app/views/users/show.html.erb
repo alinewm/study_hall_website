@@ -1,4 +1,4 @@
-<% if @user.admin? %>
+<% if current_user.admin? %>
     <h3>Question Feed</h3>
     <%= render 'users/feed' %>
 <% else %>

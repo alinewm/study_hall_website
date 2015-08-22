@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'city-state'
+gem 'whenever', :require => false
 
 gem 'bootstrap-sass'
 

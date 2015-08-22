@@ -4,12 +4,13 @@ class QuestionsController < ApplicationController
   def create
     @question = current_user.questions.build(question_params)
     if @question.save
+      current_user.use_question!
       AdminMailer.new_question_notifier(current_user, @question).deliver_now
-      flash[:success] = "Question created!"
+      flash[:notice] = "Question created!"
       redirect_to request.referrer || root_url
     else
-    @feed_items = []
-    render 'pages/about'
+      @feed_items = []
+    render 'users/show'
     end
   end
 
