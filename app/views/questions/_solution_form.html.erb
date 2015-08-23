@@ -1,8 +1,10 @@
- <%= form_for(@solution) do |f| %>
+<%= form_for(@solution) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <div><%= hidden_field_tag :question_id, @question.id %></div>
         <div class="field">
-          <%= f.text_area :content, placeholder: "Compose new answer...", class:"form-field" %>
+          <%= f.text_area :content, placeholder: "Compose new answer...", class:"form-control" %>
         </div>
+     <br>
         <%= f.submit "Post", class: "btn btn-primary" %>
  <% end %>
+</div>
