@@ -1,6 +1,6 @@
 class Question < ActiveRecord::Base
   belongs_to :user
-  has_many :solutions
+  has_one :solution
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
