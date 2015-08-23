@@ -1,3 +1,6 @@
+<div class="container update">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -5,37 +8,37 @@
 
     <div class="field">
       <%= f.label :name %><br/>
-      <%= f.text_field :name, autofocus: true %>
+      <%= f.text_field :name, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :school %><br/>
-      <%= f.text_field :school, autofocus: true %>
+      <%= f.text_field :school, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :birthday %><br/>
-      <%= f.date_field :school, :order => [:day, :month, :year], autofocus: true %>
+      <%= f.date_field :school, :order => [:day, :month, :year], autofocus: true, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :grade %><br/>
-      <%= f.text_field :grade, autofocus: true %>
+      <%= f.text_field :grade, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :city %><br/>
-      <%= f.text_field :city, autofocus: true %>
+      <%= f.text_field :city, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :state %><br/>
-      <%= f.select :state, options_for_select(br_states), autofocus: true %>
+      <%= f.select :state, options_for_select(br_states), autofocus: true, class: "form-control" %>
     </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -44,26 +47,33 @@
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: "btn btn-default" %>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= button_to "Cancel my account",
+                          registration_path(resource_name),
+                          data: { confirm: "Are you sure?" },
+                          method: :delete,
+                          class: "btn btn-default" %></p>
 
 <%= link_to "Back", :back %>
+  </div>
+  <div class="col-md-4"></div>
+</div>

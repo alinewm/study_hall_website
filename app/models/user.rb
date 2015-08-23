@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
       Question.all
     else
       questions
-      #here we'd have to pull each question with it's associated solution...
+      #here we'd have to pull each question with it's associated comment...
     end
   end
 end

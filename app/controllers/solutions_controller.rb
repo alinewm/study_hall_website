@@ -2,8 +2,8 @@ class SolutionsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @solution = current_user.solutions.build(solution_params)
-    if @solution.save
+    solution = current_user.solutions.build(solution_params)
+    if solution.save
       question = Question.find(params[:question_id])
       UserMailer.question_replied_notifier(current_user, question).deliver_now
       flash[:notice] = "Solution created!"
