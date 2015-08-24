@@ -1,6 +1,6 @@
  <% if !current_user.admin? %>
       <div class="row">
-        <div class="page-header"><h1>Ask a question</h1></div>
+        <div class="page-header"><h1>Qual é a sua pergunta?</h1></div>
       </div>
       <div class="row">
         <div class="col-md-2"></div>
@@ -11,7 +11,7 @@
       </div>
   <% end %>
   <div class="row">
-    <div class="page-header"><h1>Question feed</h1></div>
+    <div class="page-header"><h1>Perguntas</h1></div>
   </div>
   <div class="row">
     <%= render 'users/feed' %>

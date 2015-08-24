@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'rails-i18n'
+
+gem 'devise-i18n'
+
+gem 'devise-bootstrap-views'
+
 gem 'whenever', :require => false
 
 gem 'bootstrap-sass'
