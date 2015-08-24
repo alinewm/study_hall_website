@@ -1,5 +1,8 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
 <%= link_to(question_path(question.id), class:"list-group-item", id:"question-#{question.id}") do %>
       <%= question.user.email %>
       <%= question.content if question.content? %>
-      <%= image_tag question.picture.url if question.picture? %>
 <% end %>
+</div>
+<div class="col-md-2"></div>

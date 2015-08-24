@@ -1,31 +1,42 @@
 <div class="container">
   <div class="page-header">
     <h1>Question</h1>
-    <small>by <%= @question.user.email %> - Posted <%= time_ago_in_words(@question.created_at) %> ago.</small>
   </div>
   <div class="row">
+    <div class="col-md-2"></div>
     <div class="col-md-8">
       <div class="well">
         <%= @question.content %>
       </div>
     </div>
-    <div class="col-md-4"></div>
-  </div>
-  <br>
-
-  <div class="page-header">
-    <h2>Solution</h2>
+    <div class="col-md-2"></div>
   </div>
   <div class="row">
+    <div class="col-md-2"></div>
     <div class="col-md-8">
-      <%= render 'solutions/solution' %>
+      <div class="well">
+        <%= image_tag @question.picture.url if @question.picture? %>
+      </div>
+      <h4>by <%= @question.user.email %> - Posted <%= time_ago_in_words(@question.created_at) %> ago</h4>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-2"></div>
   </div>
-  <div class="row">
-    <div class="col-md-8">
-      <%= render 'questions/solution_form' if current_user.admin? %>
-    </div>
-    <div class="col-md-4"></div>
+    <br>
+<div class="page-header">
+  <h2>Solution</h2>
+</div>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <%= render 'solutions/solution' %>
   </div>
+  <div class="col-md-2"></div>
+</div>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <%= render 'questions/solution_form' if current_user.admin? %>
+  </div>
+  <div class="col-md-2"></div>
+</div>
 </div>
