@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }
+  devise_scope :user do
+    get 'users/settings/profile' => 'registrations#profile'
+  end
   resources :users, only: [:show]
   resources :questions, only: [:create, :destroy, :show]
   resources :solutions, only: [:create, :destroy]

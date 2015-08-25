@@ -8,4 +8,7 @@ class UsersController < ApplicationController
       @feed_items = current_user.feed
     end
   end
+
+  def edit
+  end
 end
