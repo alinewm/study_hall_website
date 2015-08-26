@@ -74,7 +74,6 @@ pt-BR:
   layouts:
     header:
       sign_in: Login
-      sign_up: Inscrever-se
       log_out: Sair
       hello: Olá,
       settings: Configurações

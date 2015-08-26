@@ -20,6 +20,10 @@
   padding-bottom: 20px;
 }
 
+@mixin padding_top {
+  padding-top: 30px;
+}
+
 /* universal */
 
 body {
@@ -36,21 +40,15 @@ textarea {
   resize: vertical;
 }
 
-.jumbotron {
-  margin-top: 250px;
-  text-align: center;
-  background-color: rgba(232, 163, 22, 0.3);
-  h1 {
-    margin-bottom: 10px;
-    color: black;
-  }
-}
-
 /* static pages */
 
 #landing {
-  background-image: url('teacher.jpg');
+  background-color: lightblue;
   @include background_sizing;
+}
+
+.block {
+  background-color: yellow;
 }
 
 #description {
@@ -86,10 +84,6 @@ textarea {
   @include following_page_padding;
   background-color: #31c090;
   @include background_sizing;
-}
-
-/* authentication */
-#signup, #login {
 }
 
 /* header */
@@ -136,11 +130,13 @@ body {
 
 /* typography */
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: black;
   text-align: center;
 }
 
-/* Question page */
-.page-header {
+/* devise pages */
+.signup, .login, .signup {
+  @include padding_top;
 }
+

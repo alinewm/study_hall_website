@@ -2,7 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'registrations' }
   devise_scope :user do
-    get 'users/settings/profile' => 'registrations#profile'
+    # authenticated :user do
+    #   root user_path(current_user) , as: :authenticated_root
+    # end
+
+    unauthenticated do
+      root 'registrations#new', as: :unauthenticated_root
+    end
   end
   resources :users, only: [:show]
   resources :questions, only: [:create, :destroy, :show]
@@ -12,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#about'
+  root 'registrations#new'
   get 'contact' => 'pages#contact'
   get 'team' => 'pages#team'
 
