@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   #config.i18n.default_locale = 'pt-BR'
 
   def set_locale
-    I18n.locale = params[:locale] || "pt-BR"
+    # I18n.locale = params[:locale] || "pt-BR"
+    I18n.locale = "pt-BR"
   end
 
   def after_sign_in_path_for(resource)
