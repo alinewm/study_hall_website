@@ -1,20 +1,21 @@
+<!--<img src="landing_picture.jpeg" id="bg" alt="">-->
 <div class="container signup">
   <div class="col-md-6">
-    <div class="row panel panel-default">
+    <div class="row panel panel-default info">
       <div class="panel-body">
       <h3>Plantão de dúvidas virtual</h3>
       <h4>Ajuda rápida e sem custo dos melhores professores de Sao Paulo.
         Respondemos perguntas de física, química e matemática.</h4>
       </div>
     </div>
-    <div class="row panel panel-default">
+    <div class="row panel panel-default info">
       <div class="panel-body">
       <h3>Como funciona?</h3>
       <h4>Simples! É só fazer a sua inscrição ao lado e postar sua pergunta por foto ou texto.
         Dentro de 48h, postamos a vídeo resposta, e você será notificado por email.</h4>
       </div>
     </div>
-    <div class="row panel panel-default">
+    <div class="row panel panel-default info">
       <div class="panel-body">
       <h3>Quanto custa?</h3>
       <h4>Nada, cada mês você tem direito a 5 perguntas. </h4>
@@ -46,7 +47,7 @@
               <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, class: "form-control" %>
             </div>
-            <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+            <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-success" %>
         <% end %>
         <br>
         <%= render "devise/shared/links" %>
@@ -54,3 +55,4 @@
     </div>
   </div>
 </div>
+<!--</div>-->

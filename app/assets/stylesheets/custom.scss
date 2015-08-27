@@ -13,6 +13,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+  height: 100%;
 }
 
 @mixin following_page_padding {
@@ -92,7 +93,7 @@ textarea {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: black;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -106,7 +107,9 @@ textarea {
 
 html,
 body {
-  height: 100%;
+  //height: 100%;
+  @include  background_sizing;
+  background: #2e3741;
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -131,7 +134,7 @@ body {
 /* typography */
 
 h1, h2, h3, h4 {
-  color: black;
+  color: white;
   text-align: center;
 }
 
@@ -140,3 +143,42 @@ h1, h2, h3, h4 {
   @include padding_top;
 }
 
+.signup {
+  .info {
+    background-color: transparent;
+    border-color: transparent;
+    h3, h4 {
+      color: white;
+    }
+  }
+}
+
+.navbar-custom {
+  //background-color: transparent;
+  background-color: #2e3741;
+  border: transparent;
+  .navbar-nav {
+    li {
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.registrations-new {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), image-url('landing_picture.jpeg');
+  @include  background_sizing;
+}
+
+.page-header {
+  border-color: transparent;
+}
+
+.panel-default {
+  .panel-heading {
+    h4 {
+      color: black;
+    }
+  }
+}

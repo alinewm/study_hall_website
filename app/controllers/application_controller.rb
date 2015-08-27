@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_locale
-  #config.i18n.default_locale = 'pt-BR'
 
   def set_locale
     I18n.locale = params[:locale] || "pt-BR"

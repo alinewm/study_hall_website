@@ -1,8 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  def profile
-
-  end
 
   private
 
