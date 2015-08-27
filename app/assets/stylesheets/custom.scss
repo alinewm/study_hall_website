@@ -167,7 +167,7 @@ h1, h2, h3, h4 {
 }
 
 .registrations-new {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), image-url('landing_picture.jpeg');
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('landing_picture.jpeg');
   @include  background_sizing;
 }
 
