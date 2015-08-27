@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!--<%= content_tag :html, class: class_for do %>-->
-    <html>
+<html>
 <head>
   <title>StudyHallWebsite</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,7 +7,7 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
-<%= content_tag :body, class: class_for do %>
+<%= body_tag do %>
     <%= render 'layouts/header' %>
     <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
@@ -18,6 +17,5 @@
     <% end %>
     <%= yield %>
     <!--<%= render 'layouts/footer' %>-->
-<!--<% end %>-->
 <% end %>
 </html>
